@@ -1,0 +1,177 @@
+.navbar {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 0 0 15px 0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-item {
+  height: 600px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.card-img-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-body h5 {
+  font-weight: 700;
+}
+
+.card-body p {
+  color: #323232;
+}
+
+/* ========== FOOTER ========== */
+
+.footer {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Animação de entrada suave do footer */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Logo do footer */
+.footer-logo {
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Descrição do footer */
+.footer-description {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Links do footer */
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.footer-links a:hover {
+  padding-left: 8px;
+  color: #fff !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Info de contato do footer */
+.footer-contact p {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.footer-contact a {
+  transition: all 0.3s ease;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline !important;
+  opacity: 0.8;
+}
+
+/* Ícones sociais do footer */
+.footer-social {
+  flex-wrap: wrap;
+}
+
+.footer-social-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+}
+
+.footer-social-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-6px) scale(1.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade do footer */
+@media (max-width: 768px) {
+  .footer {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  .footer h5 {
+    font-size: 1rem;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+
+  .footer-social-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+}

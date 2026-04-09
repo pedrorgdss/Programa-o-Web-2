@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contato.css">
+  <title>Etec</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-danger">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/etec_zona_leste.svg" alt="" style="height: 60px;">
+      </a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contato.html">Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="sobreNos.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="calendario.html">Calendário</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="text-center mb-2">Entre em Contato Conosco</h1>
+        <p class="text-center text-muted mb-5">Tem dúvidas ou sugestões? Fale conosco! Responderemos o mais breve
+          possível.</p>
+        <div class="card contact-form-card">
+          <div class="card-body p-5">
+            <form method="POST" action="processar_contato.php">
+              <div class="mb-4">
+                <label for="name" class="form-label"><i class="fas fa-user me-2"></i>Nome Completo</label>
+                <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Seu nome" required>
+              </div>
+              <div class="mb-4">
+                <label for="email" class="form-label"><i class="fas fa-envelope me-2"></i>Email</label>
+                <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="seu.email@exemplo.com"
+                  required>
+              </div>
+              <div class="mb-4">
+                <label for="phone" class="form-label"><i class="fas fa-phone me-2"></i>Telefone</label>
+                <input type="tel" class="form-control form-control-lg" id="phone" name="phone" placeholder="(11) 9999-9999">
+              </div>
+              <div class="mb-4">
+                <label for="subject" class="form-label"><i class="fas fa-heading me-2"></i>Assunto</label>
+                <select class="form-select form-select-lg" id="subject" name="subject" required>
+                  <option value="">Selecione um assunto</option>
+                  <option value="duvida">Dúvida</option>
+                  <option value="inscricao">Inscrição</option>
+                  <option value="sugestao">Sugestão</option>
+                  <option value="reclamacao">Reclamação</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div class="mb-4">
+                <label for="message" class="form-label"><i class="fas fa-message me-2"></i>Mensagem</label>
+                <textarea class="form-control form-control-lg" id="message" name="message" rows="6"
+                  placeholder="Escreva sua mensagem aqui..." required></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-danger btn-lg px-5"><i class="fas fa-paper-plane me-2"></i> Enviar
+                  Mensagem</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5 mb-5">
+    <h2 class="text-center mb-5"><i class="fas fa-info-circle me-2"></i>Informações de Contato</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card contact-info-card">
+          <div class="card-body text-center">
+            <div class="icon-wrapper mb-3">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h6 class="card-title">Endereço</h6>
+            <p class="card-text small">Rua Exemplo, 123<br>Zona Leste<br>São Paulo - SP</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card contact-info-card">
+          <div class="card-body text-center">
+            <div class="icon-wrapper mb-3">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h6 class="card-title">Telefone</h6>
+            <p class="card-text small"><a href="tel:+551112345678" class="text-danger text-decoration-none">(11)
+                1234-5678</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card contact-info-card">
+          <div class="card-body text-center">
+            <div class="icon-wrapper mb-3">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h6 class="card-title">Email</h6>
+            <p class="card-text small"><a href="mailto:contato@etec.sp.gov.br"
+                class="text-danger text-decoration-none">contato@etec.sp.gov.br</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card contact-info-card">
+          <div class="card-body text-center">
+            <div class="icon-wrapper mb-3">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h6 class="card-title">Horário</h6>
+            <p class="card-text small">Seg-Sex: 8h às 18h<br>Sábado: Fechado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="text-center mb-4"><i class="fas fa-share-alt me-2"></i>Conecte-se Conosco</h2>
+        <div class="card social-card">
+          <div class="card-body text-center py-5">
+            <p class="mb-4 text-muted">Acompanhe nossas redes sociais para ficar por dentro das novidades e
+              atualizações:</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/etec" class="social-icon" title="Facebook" target="_blank"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/etec" class="social-icon" title="Instagram" target="_blank"><i
+                  class="fab fa-instagram"></i></a>
+              <a href="https://www.twitter.com/etec" class="social-icon" title="Twitter" target="_blank"><i
+                  class="fab fa-twitter"></i></a>
+              <a href="https://www.youtube.com/@etec" class="social-icon" title="YouTube" target="_blank"><i
+                  class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5 mb-5">
+    <h2 class="text-center mb-5"><i class="fas fa-question-circle me-2"></i>Perguntas Frequentes</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="accordion accordion-flush" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                <i class="fas fa-graduation-cap me-2 text-danger"></i>Como posso me inscrever na Etec?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                As inscrições são feitas através do Vestibulinho. Visite o site oficial para mais informações sobre
+                datas e procedimentos.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <i class="fas fa-book me-2 text-danger"></i>Quais cursos são oferecidos?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Oferecemos diversos cursos técnicos, como Informática, Administração, Eletrônica e muito mais. Consulte
+                o site para a lista completa de cursos disponíveis.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <i class="fas fa-directions me-2 text-danger"></i>Como chegar à escola?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Estamos localizados na Zona Leste de São Paulo. Use o endereço fornecido na seção de Informações de
+                Contato para navegar.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <i class="fas fa-credit-card me-2 text-danger"></i>Qual é o valor da mensalidade?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Os cursos da Etec são gratuitos para alunos da rede pública. Entre em contato conosco para maiores
+                detalhes.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer bg-danger text-white mt-5 py-5">
+    <div class="container">
+      <!-- Logo e Descrição -->
+      <div class="row mb-5 pb-4 border-bottom border-light border-opacity-25">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="footer-logo mb-3">
+            <img src="img/etec_zona_leste.svg" alt="Etec Logo" style="height: 60px;">
+          </div>
+          <h5 class="fw-bold">Etec Zona Leste</h5>
+          <p class="footer-description">Excelência em educação técnica e profissional para transformar vidas e
+            comunidades.</p>
+        </div>
+
+        <!-- Links Rápidos -->
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5 class="fw-bold mb-3"><i class="fas fa-link me-2"></i>Links Rápidos</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html" class="text-white text-decoration-none"><i
+                  class="fas fa-arrow-right me-2"></i>Início</a></li>
+            <li><a href="contato.html" class="text-white text-decoration-none"><i
+                  class="fas fa-arrow-right me-2"></i>Contato</a></li>
+            <li><a href="sobreNos.html" class="text-white text-decoration-none"><i
+                  class="fas fa-arrow-right me-2"></i>Sobre Nós</a></li>
+            <li><a href="calendario.html" class="text-white text-decoration-none"><i
+                  class="fas fa-arrow-right me-2"></i>Calendário</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato Info -->
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3"><i class="fas fa-info-circle me-2"></i>Contato</h5>
+          <div class="footer-contact">
+            <p class="mb-2">
+              <i class="fas fa-envelope me-2 text-light"></i>
+              <a href="mailto:contato@etec.sp.gov.br" class="text-white text-decoration-none">contato@etec.sp.gov.br</a>
+            </p>
+            <p class="mb-2">
+              <i class="fas fa-phone me-2 text-light"></i>
+              <a href="tel:+551112345678" class="text-white text-decoration-none">(11) 1234-5678</a>
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt me-2 text-light"></i>
+              Zona Leste, São Paulo - SP
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Redes Sociais -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h5 class="fw-bold mb-3 text-center"><i class="fas fa-share-alt me-2"></i>Conecte-se Conosco</h5>
+          <div class="footer-social d-flex justify-content-center gap-3">
+            <a href="https://www.facebook.com/eteczonaeste" target="_blank" rel="noopener noreferrer"
+              class="footer-social-icon" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/eteczonaeste" target="_blank" rel="noopener noreferrer"
+              class="footer-social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com/eteczonaeste" target="_blank" rel="noopener noreferrer"
+              class="footer-social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/@eteczonaeste" target="_blank" rel="noopener noreferrer"
+              class="footer-social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="row pt-4 border-top border-light border-opacity-25">
+        <div class="col-12 text-center">
+          <p class="mb-0 small">
+            <i class="fas fa-copyright me-1"></i>2026 Etec Zona Leste. Todos os direitos reservados.</i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+/* ========== PÁGINA DE CALENDÁRIO ========== */
+
+/* Cards de eventos importantes */
+.event-card {
+  background: white;
+  border: none;
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid;
+}
+
+.event-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent);
+  pointer-events: none;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Variações de cores para os cards */
+.event-card-primary {
+  border-top-color: #007bff;
+}
+
+.event-card-primary .event-icon {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.event-card-success {
+  border-top-color: #28a745;
+}
+
+.event-card-success .event-icon {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+
+.event-card-warning {
+  border-top-color: #ffc107;
+}
+
+.event-card-warning .event-icon {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+}
+
+.event-card-danger {
+  border-top-color: #dc3545;
+}
+
+.event-card-danger .event-icon {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+/* Ícone do evento */
+.event-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  margin: 0 auto 20px;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-icon {
+  transform: scale(1.15) rotate(-10deg);
+}
+
+/* Textos do evento */
+.event-card h5 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.event-date {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.event-card small {
+  color: #888;
+  line-height: 1.4;
+}
+
+/* Wrapper do PDF do calendário */
+.calendar-pdf-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: #f8f9fa;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.calendar-pdf-wrapper:hover {
+  box-shadow: 0 12px 32px rgba(220, 53, 69, 0.2);
+}
+
+/* Button de download */
+.btn-lg {
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+}
