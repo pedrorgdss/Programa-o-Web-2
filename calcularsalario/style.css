@@ -1,0 +1,183 @@
+/*  RESET  BASE  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* CONTAINER */
+.container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: #1a73e8;
+  margin-bottom: 1.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #e8f0fe;
+}
+
+/*  FORM  */
+.campo {
+  margin-bottom: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+}
+
+input[type="number"] {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  width: 100%;
+}
+
+input[type="number"]:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+}
+
+/* BUTTONS */
+.botoes {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+}
+
+input[type="submit"] {
+  flex: 1;
+  padding: 0.75rem;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+input[type="submit"]:hover {
+  background-color: #1558b0;
+  transform: translateY(-1px);
+}
+
+input[type="reset"] {
+  flex: 0 0 auto;
+  padding: 0.75rem 1.3rem;
+  background-color: #f1f3f4;
+  color: #555;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+input[type="reset"]:hover {
+  background-color: #e2e5e9;
+}
+
+/* RESULTADO */
+.resultado {
+  background: #f8faff;
+  border: 1.5px solid #e8f0fe;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.resultado p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+
+.salario {
+  font-size: 1.1rem !important;
+  color: #333 !important;
+  margin-bottom: 1.4rem !important;
+}
+
+.salario strong {
+  color: #1a73e8;
+  font-size: 1.4rem;
+}
+
+/* TABLE  */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #e8eaed;
+}
+
+th {
+  color: #777;
+  font-weight: 600;
+  width: 55%;
+}
+
+td {
+  color: #333;
+  font-weight: 500;
+}
+
+tr.total th,
+tr.total td {
+  border-top: 2px solid #1a73e8;
+  border-bottom: none;
+  color: #1a73e8;
+  font-weight: 700;
+  font-size: 1rem;
+  padding-top: 0.9rem;
+}
+
+
+.btn-voltar {
+  display: inline-block;
+  text-decoration: none;
+  color: #1a73e8;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  transition: color 0.2s;
+}
+
+.btn-voltar:hover {
+  color: #1558b0;
+  text-decoration: underline;
+}
